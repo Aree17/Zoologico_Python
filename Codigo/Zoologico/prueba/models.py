@@ -105,6 +105,7 @@ class Jaula(models.Model):
 
     codigo = models.CharField(max_length=50)
     estado = models.CharField(max_length=15, choices=Estado.choices)
+    panelInformativo = models.ForeignKey('PanelInformativo', on_delete=models.CASCADE, related_name='paneles', default=0)
 
 
 class Exhibicion(models.Model):
